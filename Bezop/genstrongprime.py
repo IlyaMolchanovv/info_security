@@ -16,12 +16,6 @@ def is_prime(n):
 def is_strong_prime(p, q):
     if not is_prime(p) or not is_prime(q):
         return False
-    if math.gcd((p - 1), (q - 1)) > 10:
-        return False
-    if math.gcd((p - 1), (q - 1)) <= 2:
-        return False
-    if math.gcd((p + 1), (q + 1)) > 10:
-        return False
     if not is_prime((p - 1) // 2) or not is_prime((q - 1) // 2):
         return False
     return True
